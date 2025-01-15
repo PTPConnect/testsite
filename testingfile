@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTP iConnect App</title>
+
+    <!-- Google Site Verification -->
+    <!-- Ensure the verification content matches the one provided by Google -->
+    <meta name="google-site-verification" content="NgLk0OhfQMx-uWF3JIyJi2sajiJ-PNEuZ4pYz3FbPWE">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header, section, footer {
+            padding: 20px;
+            text-align: center;
+            margin: 10px 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+        }
+        section {
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+        }
+        .block-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .content {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PTP iConnect App</h1>
+    </header>
+
+    <section>
+        <div class="block-title">Introduction</div>
+        <div class="content">
+            <p>Connecting people...</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="block-title">Services</div>
+        <div class="content">
+            <ul>
+                <li>Business Process Modules</li>
+                <li>Incentive Modules</li>
+                <li>Integrated Modules</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 PTP iConnect App. All rights reserved.</p>
+    </footer>
+</body>
+</html>
