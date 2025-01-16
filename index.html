@@ -6,67 +6,113 @@
     <title>PTP iConnect App</title>
 
     <!-- Google Site Verification -->
-    <!-- Ensure the verification content matches the one provided by Google -->
     <meta name="google-site-verification" content="GcAMpnKECMjdWtlgm6RXUcHu7PnjcxQqN3tmflgZH-8" />
 
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- External Libraries for Collapse (e.g., Bootstrap) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        header, section, footer {
+        .offcanvas-nav {
+            position: fixed;
+            top: 60px;
+            right: 0;
+            height: calc(100% - 120px);
+            width: 250px;
+            background-color: rgba(0, 128, 128, 0.5);
+            color: white;
+            display: flex;
+            flex-direction: column;
             padding: 20px;
-            text-align: center;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .offcanvas-nav.open {
+            transform: translateX(0);
+        }
+
+        .offcanvas-nav a {
+            color: white;
+            text-decoration: none;
             margin: 10px 0;
+            font-size: 18px;
         }
+
+        .offcanvas-nav a:hover {
+            text-decoration: underline;
+        }
+
         header {
-            background-color: #4CAF50;
-            color: white;
-        }
-        section {
-            border: 1px solid #ccc;
-            background-color: #f9f9f9;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-        }
-        .block-title {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        .content {
-            font-size: 16px;
+            position: relative;
+            z-index: 10;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>PTP iConnect App</h1>
+    <header class="d-flex align-items-center justify-content-between px-3" style="background-color: teal; color: white; padding: 10px;">
+        <div class="d-flex align-items-center">
+            <img src="images/ptp_logo.png" alt="PTP Logo" style="width: 50px; height: auto; margin-right: 10px;">
+            <h1 style="margin: 0; font-size: 24px;">PTP iConnect App</h1>
+        </div>
+        <button id="navToggle" style="background: none; border: none; color: white; font-size: 24px;">
+            &#9776;
+        </button>
     </header>
 
-    <section>
-        <div class="block-title">Introduction</div>
-        <div class="content">
-            <p>Connecting people...</p>
-        </div>
-    </section>
+    <nav id="offcanvasNav" class="offcanvas-nav">
+        <a href="#introduction">Introduction</a>
+        <a href="#about">About PTP</a>
+    </nav>
 
-    <section>
-        <div class="block-title">Services</div>
-        <div class="content">
-            <ul>
-                <li>Business Process Modules</li>
-                <li>Incentive Modules</li>
-                <li>Integrated Modules</li>
-            </ul>
-        </div>
-    </section>
+    <main style="padding: 20px;">
+        <section id="introduction" style="margin-bottom: 20px;">
+            <div style="background-color: #f9f9f9; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h2>Introduction</h2>
+                <p>Welcome to the PTP iConnect App homepage.</p>
+            </div>
+        </section>
 
-    <footer>
+        <section id="about" style="margin-bottom: 20px;">
+            <div style="background-color: #f1f1f1; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h2>About PTP</h2>
+                <p>PTP iConnect is designed to connect people seamlessly.</p>
+            </div>
+        </section>
+
+        <section style="display: flex; justify-content: space-between; gap: 20px;">
+            <div style="flex: 1; background-color: #e6e6e6; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h3>Block 1</h3>
+                <p>Content for block 1.</p>
+            </div>
+            <div style="flex: 1; background-color: #dcdcdc; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h3>Block 2</h3>
+                <p>Content for block 2.</p>
+            </div>
+            <div style="flex: 1; background-color: #cfcfcf; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h3>Block 3</h3>
+                <p>Content for block 3.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer style="background-color: teal; color: white; text-align: center; padding: 10px;">
         <p>&copy; 2025 PTP iConnect App. All rights reserved.</p>
     </footer>
+
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const offcanvasNav = document.getElementById('offcanvasNav');
+
+        navToggle.addEventListener('click', () => {
+            offcanvasNav.classList.toggle('open');
+        });
+    </script>
 </body>
 </html>
